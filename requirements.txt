@@ -1,0 +1,6 @@
+duckdb
+requests
+python-dotenv
+thefuzz
+python-Levenshtein
+pandas
