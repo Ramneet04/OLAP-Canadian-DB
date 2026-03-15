@@ -15,10 +15,9 @@ MIN_CONFIDENCE   = 70
 
 def resolve_db_path() -> str:
     data_dir = Path(__file__).resolve().parents[1] / "data"
-    preferred = data_dir / "off_v2.duckdb"
+    preferred = data_dir / "canada_olap.duckdb"
     if preferred.exists():
         return str(preferred)
-
     candidates = sorted(data_dir.glob("*.duckdb"))
     if not candidates:
         raise FileNotFoundError(f"No .duckdb file found in {data_dir}")
